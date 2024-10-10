@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang ="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Presente para Minha Namorada</title>
+<style>
+	body {
+		font-family: Tangerine;
+		background-color: #FAE1E1;
+		align-items: center;
+		text-align: center;
+	}
+
+		@media (max-width: 768px) {
+	}
+
+		.container {
+   			 display: flex;
+   			 justify-content: center; /* Centraliza horizontalmente */
+   			 align-items: center; /* Centraliza verticalmente */
+	}	
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap; 
+			margin-bottom: 20px;
+	}
+
+		.container img {
+			width: 100px;
+			height: auto;
+			margin: 10px;
+			cursor: pointer;
+			border: 2px solid transparent;
+			transition: border 0.3s;
+	}
+
+		.container img:hover {
+			border: 2px solid #ff69b4;
+	}
+
+	#result {
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		display: none;
+	}
+
+	.correct {
+		color:Green;
+	}
+
+	.wrong {
+		color: red;
+	}
+
+		.container img {
+			width: 400px;
+			height: auto;
+			margin-right: 50px;
+	}
+
+		.container .text {
+			max-width: 600px;
+	}
+
+		.container { 
+			text-align: center;
+			margin: 20px;
+	}
+
+		#obraDeArte img {
+			width: 600px;
+			height: auto;
+	}
+
+		.mensagem { 
+			cursor: pointer;
+			color: blue;
+			text-direction: underline;
+	}
+
+			
+
+		.letra {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+	}
+
+		.letra img {
+			margin: 50px;
+			height: auto;
+			margin-right: 20px;
+	}
+
+		.letra p {
+			margin: 0;
+			font-size: 18px;
+	}
+	
+		#foto {
+			width: 200px;
+			height: auto;
+			margin-bottom: 20px;
+	}
+
+		.barra-container {
+			width: 50%;
+			margin: auto;
+			position: relative;
+	}
+		
+		#barraAmor {
+			width: 100%;
+			height: 15px;
+			border-radius: 10px;
+			background-color: #ddd;
+			-webkit-appearance: none;
+			appearance: none;
+			outline: none;
+	}
+
+		#barraAmor::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 40px;
+			border-radius: 10px;
+			background: linear-gradient(to right, red 0%, red var(--progress), #ddd 100%);
+	}
+
+		#barraAmor::-webkit-slider-thumb {
+			-webkit-appearance: none; 
+			width: 50px;
+			height: 50px;
+			background: url('coracao_78370-492-removebg-preview.png') no-repeat center;
+			background-size: contain;
+			cursor: pointer;
+			border: none;
+	}
+
+		#barraAmor::-moz-range-thumb {
+			width: 50%;
+			height: 50px;
+			background: url('coracao_78370-492-removebg-preview.png') no-repeat center;
+			background-size: contain;
+			cursor: pointer;
+			border: none;
+	}
+
+		#fraseAmor {
+			display: none;
+			margin-top: 20px;
+			font-size: 20px;
+			color: red;
+	}
+	
+		#porcentagem {
+			font-size: 18px;
+			margin-top: 10px;
+	}
+
+</style>
+</head>
+<body>
+	<div class ="content">
+	<h1>Oiii, Minha Princesinha</h1>
+	<div class="content">
+	<img src="20241009_220214388_iOS.jpg" alt="Flor" class="flower-corner" width="650" height="500">
+	<p>Todos Os Dias Já São Mais Que Especias Por compartilhar a Vida Com Você, e Hoje é Ultraespecial, Porque é o Dia que A Minha Linda Princesinha, À Quem Eu Sou Apaixonado Nasceu!</p>
+	<!-- Foto -->
+	<img src="20220902_032201000_iOS.jpg"alt="nossa foto juntos" width="640" height="640">
+	<p>O SORRISÃO LINDO DESDE SEMPRE ❣️</p>
+	<img src="20241009_233427482_iOS-removebg-preview.png" alt="fotocarta" width="700" height="970">
+	<div class="container">
+	<img src="20241009_221943386_iOS.jpg" alt="nossa conexão">
+	<div class="text">
+	<h2>Our connection!</h2>
+	<p>Quando temos um Companheiro que Fecha com a gente em todas as Situações, e não só isso, Mas também aquela pessoa que faz nossos dias Melhores, tem-se um Nome:"Dádiva de Deus". Não demorou pra eu perceber que Eu tinha essa Dádiva ao meu lado. A Mulher que só de me dá um 'bom dia' já serve como combustível pra enfrentar um longo dia. Com toda certeza foi o gol mais lindo da minha vida. Obrigado pelas inúmeras lições, Meu Amor. Nossos corações estão em Sintonia💍 </p>
+	</div>
+</div>
+
+	<h3>SELECIONE A IMAGEM QUE CORRESPONDE À VERDADEIRA 1ª MARAVILHA DO MUNDO! (?)</h3>
+	<div class="container">
+
+	<img src="20241010_004841983_iOS.jpg" alt="Imagem 1" onclick="checkAnswer(false)">
+	<img src="20241010_004624891_iOS.jpg" alt="Imagem 2" onclick="checkAnswer(false)">
+	<img src="20241004_201247000_iOS 3.jpg" alt="Imagem 3" onclick="checkAnswer(true)">
+
+	</div> 
+	<div id="result"></div>
+	
+	<img src="baixados-removebg-preview.png" alt="Flor" class="flower-corner" width="400" height="350">
+	<p>Que Deus prolongue Essa data por mais infinitas vezes, Meu amor! Não vejo a hora de poder te abraçar de novo. Matar a Saudade do seu Cheirinho. Tirar aqueles cochilos da tarde de Longas horas, né vidona? sei que Deus tá preparando esse dia pra gente. temos que ter Muita fé e discernimento, porque as adversidades da vida podem vir, mas seremos o pilastre um do outro! Hoje eu agradeço Muito à Deus pela sua vida. Que Ele Continue iluminando seus dias, seus passos. Você é um exemplo de mulher, Minha gata! Me enche de Orgulho. São tantas e tantas qualidades que seria quase impossível eu colocar aqui. Seu Pretinho tá sempre aqui pra te dá apoio no que der e vier. Minha Cientista, Minha engenheira, Minha gatona, Minha princesinha, Minha Modelo, Meu artigo de grife, Minha esteticista, Minha escritora, Minha cheirosa, Minha gostosa, Minha futura noiva(logo), Minha ruiva e loira, Meu Tudo!!! Eu te Amoooo meu Grande amor, Infinitamente. Feliz Aniversário , minha gatonaaa #20</p>
+
+	<h4>TOQUE NA OBRA DE ARTE⬇️</h1>
+	<p class="mensagem" onclick="trocarImagem()">⬇️CLIQUE aqui para ver a Obra de Arte</p>
+
+	<div id="obradeArte">
+		<img id="imagem" src="20241010_044313104_iOS.jpg" alt="Monalisa">
+		<p id="mensagem" style="display: none;">A VERDADEIRA OBRA DE ARTE, É ESSA AQUI😍:</p>
+	</div>
+
+	<p>!Monalisa chora todo dia no banho!</p>
+	
+	<div class="letra">
+		<img src="20241010_060843303_iOS.png" alt="Letra B" width=180 height=280>
+		<p>'B' de Brilhante, como você sempre ilumina os meus dias! Faz tudo clarear de uma maneira cativante. O que também te faz ser Bela. A mulher que é o Motivo dos meus sonhos noturnos! oh Minha Beatriz, minha Menina Bela, sinto falta do seu cheiro</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_060905114_iOS.png" alt="Letra E" width=180 height=280>
+		<p>Encantadora & Especial. Me pego olhando suas fotos na minha galeria e viajo pra um reino tão tão distante. Encanta a minha vida e me faz sentir o homem mais feliz desse mundo inteiro(...)</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_060936232_iOS.png" alt="Letra A" width=180 height=280>
+		<p>"Amável, ela diz que é chata e díficl de lidar, mas a verdade é que esse jeitinho que me faz ficar mais apaixonado. Você pode até dizer que não acha, mas você tem um jeito tão Amável, minha querida"</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_061002050_iOS.png" alt="Letra T" width=180 height=280>
+		<p>T de Talentosa!!! Isso é algo de sobra que você tem. O que mais vou querer? Principalmente por ter me feito mini obras de artes, totalmente artesanais. até um mini Iury tá? essa coleção ninguém tem</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_061047350_iOS.png" alt="Letra R" width=180 height=280>
+		<p>Radiando sua Luz por onde passa! As vezes até incomoda pessoas, mas isso porque você Radia a luz de Deus, minha princesa. E Seu coração puro é o que ser esse vagalume</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_061111440_iOS.png" alt="Letra I" width=180 height=280>
+		<p>Incrível & Inteligente. Essa eu bato no peito e assumo! Minha Mulher é a pessoa mais inteligente que existe. Isso tudo fruto da sua dedicação. É aquilo né amor "Deus ajuda a quem cedo madruga". Não se trata de acordar cedo e sim de estar em busca dos sonhos</p>
+	</div>
+
+	<div class="letra">
+		<img src="20241010_061125266_iOS.png" alt="Letra Z" width=180 height=280>	
+		<p>Zelosa Zelosa Zelosa... volto a até a ser criança de novo. Mas amor obrigado por todos seus cuidados comigo. Por todos os conselhos, puxões de orelha, conversas e carinhos </p>
+	</div>
+
+	<h5>O QUANTO EU AMO ESSA MULHER(?)</h5>
+	<img id ="foto" src="20240905_001602000_iOS 1.jpg" alt="foto da Beatriz">
+
+	<div class="barra-container">
+	<input type="range" id="barraAmor" min="0" max="100" value="0" oninput="atualizarAmor()">
+	<div id ="porcentagem">0%</div>
+	</div>
+
+	<p id="fraseAmor">EU TE AMOOO MUITÃOZÃOO PRA SEMPRE</p>
+
+	<script>
+		function checkAnswer(isCorrect) {
+		const resultDiv = document.getElementById('result');
+		if (isCorrect) {
+			resultDiv.textContent = "Mas é LÓGICO que é você, Minha Lindonaaaaaa! 😍";
+			resultDiv.className = 'Correct';
+		} else {
+			resultDiv.textContent = "Erradíssimo! Só existe uma verdadeira Maravilha, que é a Minha Goxxtosa🫵";
+			resultDiv.className = 'wrong';
+		}
+		resultDiv.style.display = 'block';
+	}
+	
+		function trocarImagem() {
+			var imagem = document.getElementById('imagem');
+			var mensagem = document.getElementById('mensagem');
+
+			imagem.src = '20241010_043446615_iOS.jpg';
+			imagem.alt = '20241010_043446615_iOS.jpg';
+			imagem.style.width = '250px';
+			mensagem.style.display = 'block';
+	}
+
+		function atualizarAmor() {
+			var barra = document.getElementById('barraAmor');
+			var porcentagem = document.getElementById('porcentagem');
+			var fraseAmor = document.getElementById('fraseAmor');
+
+		porcentagem.textContent = barra.value + "%";
+
+		barra.style.setProperty('--progress', barra.value + '%');
+
+		if (barra.value == 100) {
+			fraseAmor.style.display = 'block';
+	} else {
+			fraseAmor.style.display = 'none';
+	}
+}
+	</script>
+</body>
+</html>
